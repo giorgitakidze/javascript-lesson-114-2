@@ -27,7 +27,7 @@ let ary=function(array){
      }
      console.log(g);
 }
-    ary(mas)
+    ary(mas);
 
     let user = {
         firstname: 'giorgi',
@@ -35,6 +35,33 @@ let ary=function(array){
         age: 32,
         isloggedin: true
       }
+
+
+      //ფუნქციამ უნდა დააბრუნოს სახელი და გვარი ადგილის გამოტოვებით (მაგ: 'giorgi saakadze') თუ isloggedin არის true და false თუ isloggedin ფროფერთი არის false;
+
+      function userName(){
+        if(user.isloggedin==true){
+            console.log(user.firstname+" "+user.lastname);
+        }
+        if (user.isloggedin==false) {
+            console.log(false);
+        }
+    }
+    userName();  
+
+    //შექმენით ფუნქცია რომელსაც გადაეცემა ერთი პარამეტრი. ეს პარამეტრი უნდა იყოს რიცხვების მასივი და ფუნქციამ უნდა დააბრუნოს ამ რიცხვებიდან მაქსიმალური:
+
+    let aray=[12,32,54,2,67,45,23,2];
+max=mas=>{
+    let maxNums=mas[0];
+   for (let index = 1; index < mas.length; index++) {
+     if (mas[index]>maxNums){
+         maxNums=mas[index]
+     }
+   }
+   return maxNums;
+};
+console.log(max(aray));
 
 
 
